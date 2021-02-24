@@ -3,7 +3,7 @@ kind: ReplicaSet
 metadata:
   name: identity
   annotations:
-    argocd.argoproj.io/sync-wave: "0"
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   replicas: 1
   selector:
@@ -35,7 +35,7 @@ kind: Job
 metadata:
   generateName: postsynctest
   annotations:
-    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   template:
     spec:
@@ -50,7 +50,7 @@ kind: ReplicaSet
 metadata:
   name: orchestrator
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   replicas: 1
   selector:
@@ -70,7 +70,7 @@ kind: Service
 metadata:
   name: orchestrator
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   selector:
     tier: orchestrator
