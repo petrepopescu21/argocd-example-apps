@@ -33,7 +33,7 @@ spec:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generateName: checkIdentityIsOnline
+  generateName: postsynctest
   annotations:
     argocd.argoproj.io/hook: PostSync
 spec:
