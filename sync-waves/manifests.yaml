@@ -33,7 +33,7 @@ spec:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generateName: postsynctest
+  name: failjob
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
