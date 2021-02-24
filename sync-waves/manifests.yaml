@@ -42,7 +42,7 @@ spec:
       containers:
         - name: ping
           image: alpine:latest
-          command: ["sleep", "5"]
+          command: ["just fail please"]
       restartPolicy: Never
 ---
 apiVersion: apps/v1
