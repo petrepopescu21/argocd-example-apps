@@ -37,13 +37,13 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
-  backoffLimit: 3
+  backoffLimit: 1
   template:
     spec:
       containers:
         - name: echo
           image: alpine:latest
-          command: ["echo","done"]
+          command: ["fakecommand"]
       restartPolicy: Never
 ---
 apiVersion: apps/v1
