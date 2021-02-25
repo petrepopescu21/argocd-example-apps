@@ -41,9 +41,9 @@ spec:
   template:
     spec:
       containers:
-        - name: thiswillfail
+        - name: thiswillnotfail
           image: alpine:latest
-          command: ["fail"]
+          command: ["echo","done"]
       restartPolicy: Never
 ---
 apiVersion: apps/v1
