@@ -37,6 +37,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
+  backoffLimit: 3
   template:
     spec:
       containers:
@@ -44,7 +45,6 @@ spec:
           image: alpine:latest
           command: ["fail"]
       restartPolicy: Never
-      backoffLimit: 3
 ---
 apiVersion: apps/v1
 kind: ReplicaSet
