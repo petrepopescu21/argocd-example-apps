@@ -41,7 +41,7 @@ spec:
   template:
     spec:
       containers:
-        - name: thiswillnotfail
+        - name: echo
           image: alpine:latest
           command: ["echo","done"]
       restartPolicy: Never
